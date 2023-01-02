@@ -81,7 +81,7 @@ main {
     padding-left: 4em;
     font-weight: bold;
 }
-.content > h1 > span {
+span {
     color: var(--secondary-red);
 }
 .content  {
@@ -90,7 +90,10 @@ main {
     gap: 40px;
     padding-top: 10em;
 }
-.content  > h1 {
+
+
+
+h1 {
     font-size: clamp(2rem, 2vw, 4rem);
     word-wrap: break-word;
     white-space: normal;
@@ -126,6 +129,7 @@ main {
     color: white;            
     box-shadow: 10px 20px 10px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    cursor: pointer;
   }
 
   .btn:hover {
@@ -158,6 +162,10 @@ main {
     transition: all 0.5s;
     opacity: 0;
 
+}
+
+.hide {
+    display: none;
 }
 
 @media screen and (max-width: 1300px) {
