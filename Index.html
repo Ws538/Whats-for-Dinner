@@ -11,7 +11,9 @@
   <body>
     <header>
       <nav>
-        <a id="fave-recipes" href="./assets/Favs /Fave.html">Favourite recipes</a>
+        <a id="fave-recipes" href="./assets/Favs /Fave.html"
+          >Favourite recipes</a
+        >
         <a id="history" href="./assets/Recent-Search.html">Search history</a>
       </nav>
     </header>
@@ -38,19 +40,21 @@
         <div id="foodQuestion" class="hide">
           <div class="contentOne">
             <h1>
-              How are we feeling? <span>Healthy</span> Foods or
-              <span>Junk</span> Foods?
+              How are we feeling? <span>Happy</span>or
+              <span>Sad</span>
             </h1>
 
-            <div class="btns">
-              <button class="btn">Healthy</button>
-              <button class="btn">Junk</button>
+            <div class="btns"> 
+              <button onclick="openHealthyHTML()" class="btn">Happy</button>
+              <button class="btn">Sad</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="img-container">
-        <img src="./assets/images/burger.png" alt="Burger image" />
+      <div id="burgerImage" class="hide">
+        <div class="img-container">
+          <img src="./assets/images/burger.png" alt="Burger image" />
+        </div>
       </div>
     </main>
     <script src="./assets/Scirpt.js"></script>

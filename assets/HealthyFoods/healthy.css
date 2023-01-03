@@ -1,0 +1,72 @@
+* {
+  background-color: #a6fa9b;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tile {
+  position: absolute;
+  border-radius: 1rem;
+  
+}
+
+.tile:nth-child(1) {
+    background-color: rgb(255, 238, 88);
+    height: 13%;
+    width: 22%;
+    left: 8%;
+    top: 19%;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 51px;
+}
+
+.tile:nth-child(2) {
+  background-color: rgb(202, 34, 34);
+  height: 19%;
+  width: 22%;
+  left: 8%;
+  top: 54%;
+}
+
+.tile:nth-child(3) {
+  background-color: violet;
+  height: 19%;
+  width: 22%;
+  left: 69%;
+  top: 20%;
+}
+
+.tile:nth-child(4) {
+  background-color: rgb(165, 14, 246);
+  height: 19%;
+  width: 22%;
+  left: 69%;
+  top: 54%;
+}
+
+.tile:nth-child(5) {
+    background-color: rgb(35, 222, 188);
+    height: 19%;
+    width: 22%;
+    left: 39%;
+    top: 6%;
+}
+
+.tile:nth-child(6) {
+    background-color: rgb(218, 91, 27);
+    height: 19%;
+    width: 22%;
+    left: 39%;
+    top: 68%;
+}
+
+
+.tile:nth-child(7) {
+    background-color: rgb(200, 28, 85);
+    height: 19%;
+    width: 22%;
+    left: 39%;
+    top: 37%;
+}
+
+
