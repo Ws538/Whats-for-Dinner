@@ -22,15 +22,16 @@ header {
     width: 100%;
     padding: 2.5em 0;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-green);
     position: fixed;
-    
+    z-index: 2;
 }
 nav {
     padding: 0 4em;
     display: flex;
     gap: 50px;
     align-items: center;
-    
+ 
 }
 nav > a {
     color: #A83E3C;
@@ -47,6 +48,8 @@ main {
     width: 100%;
     min-height: 100vh;
     background-color: var(--primary-green);
+    position: relative;
+    z-index: 1;
 }
 .grid-items {
     display: grid;

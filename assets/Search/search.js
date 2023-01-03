@@ -1,15 +1,6 @@
 const baseurl =
   "https://api.edamam.com/api/recipes/v2?app_id=86bfcee4&app_key=28ee446263661df1201ba54d78bd5e1d&type=public";
 
-const urlParams = new URLSearchParams(window.location.search);
-const searchParam = urlParams.get("q");
-window.onload = async function () {
-    // const recipes = await getRecipes(baseurl + `&q=${searchParam}`);
-    // showRecipes(recipes);
-  };
-
-
-
 const getRecipes = async (url) => {
     let recipes = [];
     await fetch(url)
@@ -22,8 +13,9 @@ const getRecipes = async (url) => {
     return recipes;
 };
 
-
+let nextPage;
 const showRecipes = (data) => {
+    nextPage = data._links.next.href;
     $(".grid-items").append(`    
     ${data.hits
       .map((recipe) => {
@@ -53,5 +45,27 @@ const showRecipes = (data) => {
       .join("")}
 `);
 }
+let lastDiv;
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      fetch(nextPage)
+        .then((res) => res.json())
+        .then((data) => {
+          showRecipes(data);
+          lastDiv = document.querySelector(".card:last-child");
+          observer.observe(lastDiv);
+          observer.unobserve(entry.target);
+        });
+    }
+  });
+});
 
-
+window.onload = async function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get("q");
+    const recipes = await getRecipes(baseurl + `&q=${searchParam}`);
+    showRecipes(recipes);
+    lastDiv = document.querySelector(".card:last-child");
+    observer.observe(lastDiv);
+  };
