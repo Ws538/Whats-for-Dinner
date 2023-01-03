@@ -16,4 +16,8 @@ function openHealthyHTML() {
   window.location.href = "./assets/HealthyFoods/healthy.html"
 }
 
+function openJunkHTML() {
+  window.location.href = "./assets/JunkFoods/Junk.html"
+}
+
 foodButton.addEventListener("click", startFoodQuestions);
