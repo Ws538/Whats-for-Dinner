@@ -31,6 +31,21 @@ function showDrinkOptions(event) {
     secondUserChoice = event.target.id;
     console.log(secondUserChoice);
     combinedChoices = firstUserChoice.concat(secondUserChoice);
+    console.log(combinedChoices);
+    switch (combinedChoices) {
+        case alcoholicbitter:
+            window.location.href = "./assets/Drinks/alcoholic-bitter.html"
+            break;
+        case alcoholicsweet:
+            window.location.href = "./assets/Drinks/alcoholic-sweet.html"
+            break;
+        case non-alcoholicbitter:
+            window.location.href = "./assets/Drinks/nonalcoholic-bitter.html"
+            break;
+        case non-alcoholicsweet:
+            window.location.href = "./assets/Drinks/nonalcoholic-sweet.html"
+            break;
+    }
     //   switch case for each of the four combos using var combinedChoices
 // window.location.href = "./assets/TBC"
 }
