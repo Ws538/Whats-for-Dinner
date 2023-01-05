@@ -66,6 +66,7 @@ main {
     min-height: 100vh;
     background-image: url(../images/greenimage.jpeg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     position: relative;
     z-index: 1;
