@@ -50,14 +50,39 @@ main {
     background-color: var(--primary-green);
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    font-size: 1.4rem;
+}
+section > h1 {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.544);
+}
+section > ul {
+    font-size: 1.3rem;
 
-.container {
+}
+.heading {
     padding-top: 8em;
+    text-align: center;
+}
+.container {
+    max-width: 1240px;
+    margin: auto;
+   
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
 }
@@ -72,6 +97,17 @@ main {
     gap: 20px;
 }
 
+
 .container > img {
     width: 60em;
+}
+
+.health-labels {
+    margin-top: 50px;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    min-width: 20em;
+    max-width: 20em;
 }

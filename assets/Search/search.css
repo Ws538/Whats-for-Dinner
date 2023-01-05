@@ -34,7 +34,7 @@ nav {
  
 }
 nav > a {
-    color: #A83E3C;
+    color: var(--secondary-red);
     font-size: 1.4rem;
 }
 nav > input {
