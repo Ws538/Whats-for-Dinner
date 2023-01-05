@@ -1,0 +1,133 @@
+:root {
+    --primary-green: #a6fa9b;
+    --secondary-red: #A83E3C;
+    --text-color: black;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: #A83E3C;
+}
+
+header {
+    width: 100%;
+    padding: 2.5em 0;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-green);
+    position: absolute;
+    z-index: 2;
+}
+nav {
+    padding: 0 4em;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+ 
+}
+nav > a {
+    color: var(--secondary-red);
+    font-size: 1.4rem;
+}
+nav > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 1em;
+    font-size: 1.4em;
+}
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary-green);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    font-size: 1.4rem;
+}
+section > h1 {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.544);
+    text-align: center;
+}
+ ul {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+li {
+    list-style: none;
+}
+.bold {
+    font-weight: bold;
+}
+.heading {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.container {
+    max-width: 1240px;
+    margin: auto;
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+.recipe-info {
+    font-size: 1.6rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.heading-container {
+   display: flex;
+   padding-top: 8em;
+   gap: 20px;
+   border-bottom: 1px solid var(--secondary-red);
+   padding-bottom: 2em;
+   font-size: 1.6rem;
+}
+.heading-container > img {
+    float: left;
+}
+
+.container > img {
+    width: 60em;
+}
+
+.health-labels {
+
+    font-size: 1.1rem;
+    padding: 2em;
+    text-align: center;
+    min-width: 20em;
+    max-width: 20em;
+}
