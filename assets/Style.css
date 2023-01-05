@@ -6,8 +6,9 @@
 */
 
 :root {
-    --primary-green: #a6fa9b;
-    --secondary-red: #A83E3C;
+    /* --primary-green: #a6fa9b; */
+    background-image: url('/assets/images/greenimage.jpeg');
+    --secondary-red: #e06363;
     --text-color: black;
 }
 
@@ -21,9 +22,9 @@
 a {
     text-decoration: none;
 }
-a:visited {
+/* a:visited {
     color: var(--secondary-red);
-}
+} */
 
 /* 
     Bottom right red circle
@@ -54,10 +55,13 @@ nav {
     display: flex;
     gap: 50px;
     
+    
 }
 nav > a {
-    color: var(--secondary-red);
-    font-size: 1.4rem;
+    color: black;
+    font-size: 1.6rem;
+    
+    
 }
 
 main {
@@ -82,7 +86,7 @@ main {
     font-weight: bold;
 }
 span {
-    color: var(--secondary-red);
+    color: rgb(222, 8, 8);
 }
 .content  {
     display: flex;
@@ -133,7 +137,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
-    color: white;            
+    color: rgb(0, 0, 0);            
     box-shadow: 10px 20px 10px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     cursor: pointer;
@@ -163,7 +167,7 @@ h1 {
     background: var(--secondary-red);
     border: none;
     font-size: 1.8rem;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 25px;
     border-radius: 10px;
     transition: all 0.5s;
@@ -171,9 +175,14 @@ h1 {
 
 }
 
+::placeholder {
+    color: black;
+}
+
 .hide {
     display: none;
 }
+
 
 @media screen and (max-width: 1300px) {
     .content {

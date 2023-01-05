@@ -1,19 +1,20 @@
 * {
-  background-color: #a6fa9b;
-  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
 
+body {
+  background-image: url("/assets/images/greenimage.jpeg");
+  background-size: cover;
 }
 
 .tile > p {
-  position:absolute;
-  inset:0;
+  position: absolute;
+  inset: 0;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
-  letter-spacing: 2px;
-  
+  font-size: 40px;
 }
 
 .tile {
@@ -42,7 +43,7 @@
   transition: opacity 800ms ease, transform 800ms ease;
 }
 .tile:nth-child(1) {
-  background-image: url('/assets/HealthyFoods/FoodImages/Japan-Flag.jpeg') ;
+  background-image: url("/assets/HealthyFoods/FoodImages/Japan-Flag.jpeg");
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -51,7 +52,7 @@
 }
 
 .tile:nth-child(2) {
-  background-image: url('/assets/HealthyFoods/FoodImages/mexicanflag.jpeg');
+  background-image: url("/assets/HealthyFoods/FoodImages/mexicanflag.jpeg");
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -60,7 +61,7 @@
 }
 
 .tile:nth-child(3) {
-  background-image: url('/assets/HealthyFoods/FoodImages/italianFlag.jpeg');
+  background-image: url("/assets/HealthyFoods/FoodImages/italianFlag.jpeg");
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -69,7 +70,7 @@
 }
 
 .tile:nth-child(4) {
-  background-image: url('/assets/HealthyFoods/FoodImages/Indian-flag.png');
+  background-image: url("/assets/HealthyFoods/FoodImages/Indian-flag.png");
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -78,7 +79,7 @@
 }
 
 .tile:nth-child(5) {
-  background-image: url('/assets/HealthyFoods/FoodImages/greekFlag.webp');
+  background-image: url("/assets/HealthyFoods/FoodImages/greekFlag.webp");
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -87,7 +88,7 @@
 }
 
 .tile:nth-child(6) {
-  background-image: url('/assets/HealthyFoods/FoodImages/chineseflag.jpeg');
+  background-image: url("/assets/HealthyFoods/FoodImages/chineseflag.jpeg");
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -96,14 +97,16 @@
 }
 
 .tile:nth-child(7) {
-  background: linear-gradient(to right,#8c2525f6, #e06363);
+  /* background: linear-gradient(to right,#e06363,#a6fa9b); */
+  background-image: url("/assets/HealthyFoods/FoodImages/confused.png");
+  background-size: cover;
   height: 19%;
   width: 22%;
   left: 39%;
   top: 37%;
 }
 
-body::after {
+/* body::after {
   content: "";
   position: absolute;
   top: 0;
@@ -113,4 +116,4 @@ body::after {
   background: linear-gradient(#8c2525f6, #e06363);
   clip-path: circle(50% at right 100%);
   z-index: 0;
-}
+} */
