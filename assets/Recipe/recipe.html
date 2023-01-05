@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="recipe.css">
+    <script src="./recipe.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="fave-recipes" href="./assets/Favs /Fave.html">Favourite recipes</a>
+            <a id="history" href="./assets/Recent-Search.html">Search history</a>
+        </nav>
+
+    </header>
+    <main>
+        <div class="heading-container">
+            <img id="img" src="${recipe.images.REGULAR.url}">
+            <div class="heading">
+                <h1 id="title">${recipe.label}</h1>
+                <h3>${recipe.dishType[0]}</h3>
+                <h3>Calories per serving: ${(recipe.calories / recipe.yield).toFixed(0)}</h3>
+                
+            </div>
+        </div>
+       
+        
+      
+         <div class="health-labels">
+            <h3>Health Labels:</h3>
+            <div class="labels">
+                ${recipe.healthLabels.map(label=>{
+                    return `${label}, `
+                }).join('')}
+            </div>
+        </div>
+        <div class="container">
+            <section class="ingredients">
+                <h1>Ingredients</h1>
+                <ul id="ul">
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                </ul>
+            </section>
+            <section class="nutrition">
+                <h1>Nutrition</h1>
+                <ul>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                    <li>Apple</li>
+                </ul>
+            
+            </section>
+        </div>
+    </main>
+</body>
+</html>

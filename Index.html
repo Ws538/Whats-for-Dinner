@@ -26,7 +26,7 @@
           </h1>
           <div class="btns">
             <button id="FoodBtn" class="btn">Food</button>
-            <button class="btn">Drink</button>
+            <button id="DrinkBtn" class="btn">Drink</button>
           </div>
           <div id="search-bar">
             <input
@@ -50,6 +50,28 @@
             </div>
           </div>
         </div>
+        <div id="drinkQuestion1" class="hide">
+          <div class="contentOne">
+            <h1>
+              Long day? Need something to take the edge off?
+            </h1>
+            <div class="btns"> 
+              <button onclick="showDrinkQuestion2(event)" class="btn" id="alcoholic">Alcoholic</button>
+              <button onclick="showDrinkQuestion2(event)" class="btn" id="non-alcoholic">Non-alcoholic</button>
+            </div>
+          </div>
+        </div>
+        <div id="drinkQuestion2" class="hide">
+          <div class="contentOne">
+            <h1>
+              Are you feeling sweet or bitter today?
+            </h1>
+            <div class="btns"> 
+              <button onclick="showDrinkOptions(event)" class="btn" id="sweet">Sweet</button>
+              <button onclick="showDrinkOptions(event)" class="btn" id="bitter">Bitter</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="burgerImage" class="hide">
         <div class="img-container">
@@ -59,5 +81,6 @@
     </main>
     <script src="./assets/Scirpt.js"></script>
     <script src="./assets/FoodBtn.js"></script>
+    <script src="./assets/DrinkBtn.js"></script>
   </body>
 </html>
