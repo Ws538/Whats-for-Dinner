@@ -20,7 +20,6 @@ function startDrinkQuestions() {
 //show drink question 2
 function showDrinkQuestion2(event) {
     firstUserChoice = event.target.id;
-    // console.log(event.target);
     console.log(firstUserChoice);
     content.classList.add("hide");
     drinkQuestion1.classList.add("hide");
@@ -28,8 +27,9 @@ function showDrinkQuestion2(event) {
 }
 
 //show drink options based on previous two user choices
-function showDrinkOptions(e) {
-    secondUserChoice = e.target.id;
+function showDrinkOptions(event) {
+    secondUserChoice = event.target.id;
+    console.log(secondUserChoice);
     combinedChoices = firstUserChoice.concat(secondUserChoice);
     //   switch case for each of the four combos using var combinedChoices
 // window.location.href = "./assets/TBC"
