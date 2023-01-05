@@ -18,8 +18,9 @@ function startDrinkQuestions() {
 }
 
 //show drink question 2
-function showDrinkQuestion2(e) {
-    firstUserChoice = e.target.id;
+function showDrinkQuestion2(event) {
+    firstUserChoice = event.target.id;
+    // console.log(event.target);
     console.log(firstUserChoice);
     content.classList.add("hide");
     drinkQuestion1.classList.add("hide");
