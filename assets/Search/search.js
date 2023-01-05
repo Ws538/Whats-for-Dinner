@@ -26,7 +26,7 @@ const showRecipes = (data) => {
         );
         const recipeId = baseId.substring(baseId.indexOf("/") + 1);
         return `
-        <div class="card" style="background-color: rgba(255, 255, 255, 0.8);">
+        <div class="card">
           <img src="${
             recipe.recipe.images.REGULAR.url
           }" class="card-img-top" alt="">

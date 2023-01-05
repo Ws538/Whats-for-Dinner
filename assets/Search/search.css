@@ -17,12 +17,16 @@ a {
 a:visited {
     color: #A83E3C;
 }
-
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
 header {
     width: 100%;
     padding: 2.5em 0;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-green);
+    background-color: rgba(255, 255, 255, 0.3);
+
     position: fixed;
     z-index: 2;
 }
@@ -47,7 +51,9 @@ nav > input {
 main {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--primary-green);
+    background-image: url(../images/greenimage.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
     z-index: 1;
 }
