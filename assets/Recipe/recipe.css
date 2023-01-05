@@ -56,24 +56,37 @@ main {
 }
 section {
     display: flex;
-    align-items: center;
-    justify-content: center;
+
     flex-direction: column;
     gap: 20px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 1em;
     font-size: 1.4rem;
 }
 section > h1 {
     border-bottom: 1px solid rgba(112, 112, 112, 0.544);
+    text-align: center;
 }
-section > ul {
+ ul {
     font-size: 1.3rem;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+li {
+    list-style: none;
+}
+.bold {
+    font-weight: bold;
 }
 .heading {
-    padding-top: 8em;
+
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 .container {
     max-width: 1240px;
@@ -81,10 +94,8 @@ section > ul {
    
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
+    display: flex;
+
 }
 .recipe-info {
     font-size: 1.6rem;
@@ -96,16 +107,25 @@ section > ul {
     justify-content: center;
     gap: 20px;
 }
-
+.heading-container {
+   display: flex;
+   padding-top: 8em;
+   gap: 20px;
+   border-bottom: 1px solid var(--secondary-red);
+   padding-bottom: 2em;
+   font-size: 1.6rem;
+}
+.heading-container > img {
+    float: left;
+}
 
 .container > img {
     width: 60em;
 }
 
 .health-labels {
-    margin-top: 50px;
-    font-size: 1.3rem;
-    background-color: rgba(0, 0, 0, 0.1);
+
+    font-size: 1.1rem;
     padding: 2em;
     text-align: center;
     min-width: 20em;
