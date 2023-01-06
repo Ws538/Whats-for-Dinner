@@ -5,27 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./healthy.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>HappyFoods!</title>
   </head>
 
   <body>
-    <div id="cultureTiles">
-      <div id="japanCultureTile" class="tile">
+    <button onclick="openHealthyHTML()" id="Button" class="hide">Go Back</button>
+    <button onclick="openHTML()" id="homeButton" class="hide">Go Back</button>
+
+
+    <div id="cultureTiles" class="hide">
+      <div id="div1" class="tile" >
         <img src="./FoodImages/Japanese-Foods.webp" />
       </div>
-      <div id="mexicanCultureTile" class="tile">
+      <div id="div2" class="tile" >
         <img src="./FoodImages/MexicanFoods.jpeg" />
       </div>
-      <div id="italianCultureTile" class="tile">
+      <div id="div3" class="tile" >
         <img src="./FoodImages/italianFood.jpeg" />
       </div>
-      <div id="indianCultureTile" class="tile">
+      <div id="div4" class="tile" >
         <img src="./FoodImages/IndianFoods.jpeg" />
       </div>
-      <div id="greekCultureTile" class="tile">
+      <div id="div5" class="tile" >
         <img src="./FoodImages/GreekFoods.png" />
       </div>
-      <div id="chineseCultureTile" class="tile">
+      <div id="div6" class="tile" > 
         <img src="./FoodImages/chinese-cuisine.jpeg" />
       </div>
       <div id="idkTile" class="tile">
@@ -35,18 +39,74 @@
     </div>
 
     <div id="japanFoodTiles" class="hide">
-      <div class="japaneseTileOne" id="hoverEffect">
+      <div class="TileOne" id="hoverEffect">
         <img src="/assets/HealthyFoods/FoodImages/udonimage.jpeg" />
         <p>UDON</p>
       </div>
-      <div class="japaneseTileTwo" id="hoverEffect">
-        <p>JapaneseDish2</p>
+      <div class="TileTwo" id="hoverEffect">
+        <img src="./FoodImages/Glazed-Miso-Salmon.jpg">
+        <p>Miso Salmon</p>
       </div>
     </div>
 
-    <div>
-      
+    <div id="mexicanFoodTiles" class="hide">
+      <div class="TileOne" id="hoverEffect">
+        <img src="./DishImages/Tacos.jpeg" />
+        <p>Tacos</p>
+      </div>
+      <div class="TileTwo" id="hoverEffect">
+        <img src="./DishImages/enchiladas.jpeg">
+        <p>Enchiladas</p>
+      </div>
     </div>
+
+    <div id="italianFoodTiles" class="hide">
+      <div class="TileOne" id="hoverEffect">
+        <img src="./DishImages/pasta.jpeg" />
+        <p>Pasta</p>
+      </div>
+      <div class="TileTwo" id="hoverEffect">
+        <img src="./DishImages/bruschetta.jpeg">
+        <p>Bruschettas</p>
+      </div>
+    </div>
+
+    <div id="indianFoodTiles" class="hide">
+      <div class="TileOne" id="hoverEffect">
+        <img src="./DishImages/tikamasala.jpeg" />
+        <p>Tikka Masala</p>
+      </div>
+      <div class="TileTwo" id="hoverEffect">
+        <img src="./DishImages/dalh.jpeg">
+        <p>Dahl</p>
+      </div>
+    </div>
+
+
+    <div id="greekFoodTiles" class="hide">
+      <div class="TileOne" id="hoverEffect">
+        <img src="./DishImages/greekSalad.jpeg" />
+        <p>Greek Salad</p>
+      </div>
+      <div class="TileTwo" id="hoverEffect">
+        <img src="./DishImages/moussaka.jpeg">
+        <p>Moussaka</p>
+      </div>
+    </div>
+
+    <div id="chineseFoodTiles" class="hide">
+      <div class="TileOne" id="hoverEffect">
+        <img src="./DishImages/panfriedDumplings.jpeg" />
+        <p>Pan Fried Dumplings</p>
+      </div>
+      <div class="TileTwo" id="hoverEffect">
+        <img src="./DishImages/wontonnoodlesoup.jpeg">
+        <p>Wonton Noodle Soup</p>
+      </div>
+    </div>
+
+
+
 
   </body>
   <script src="./healthy.js"></script>
