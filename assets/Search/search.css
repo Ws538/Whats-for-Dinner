@@ -39,6 +39,7 @@ header {
     transition: 0.8s;
     position: fixed;
     z-index: 2;
+    color: black;
 }
 header:hover {
     background-color: rgba(255, 255, 255, 0.9);
@@ -48,11 +49,12 @@ nav {
     display: flex;
     gap: 50px;
     align-items: center;
+
  
 }
 nav > a {
-    color: var(--secondary-red);
     font-size: 1.4rem;
+    color: black;
 }
 nav > input {
     background-color: transparent;

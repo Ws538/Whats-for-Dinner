@@ -22,9 +22,13 @@ header {
     width: 100%;
     padding: 2.5em 0;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-green);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     z-index: 2;
+    transition: background-color 0.8s;
+}
+header:hover {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 nav {
     padding: 0 4em;
@@ -47,7 +51,10 @@ nav > input {
 main {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--primary-green);
+    background-image: url(../images/greenimage.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     z-index: 1;
     display: flex;
@@ -61,6 +68,7 @@ section {
     gap: 20px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     padding: 1em;
     font-size: 1.4rem;
 }
@@ -81,12 +89,20 @@ li {
     font-weight: bold;
 }
 .heading {
-
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+}
+.heading > button {
+    font-size: 1.8rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--secondary-red);
+    padding: 0.5em;
+    cursor: pointer;
 }
 .container {
     max-width: 1240px;
@@ -109,7 +125,11 @@ li {
 }
 .heading-container {
    display: flex;
+   justify-content: space-around;
    padding-top: 8em;
+   background-color: rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(10px);
+   min-width: 1240px;
    gap: 20px;
    border-bottom: 1px solid var(--secondary-red);
    padding-bottom: 2em;
