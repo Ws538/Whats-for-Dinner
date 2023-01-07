@@ -118,7 +118,7 @@ h1 {
 .img-container {
     position: relative;
     z-index: 2;
-    width: 65em;
+    width: 60em;
     display: flex;
     justify-content: flex-end;
 }
