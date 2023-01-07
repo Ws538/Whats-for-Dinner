@@ -182,6 +182,9 @@ h1 {
 
 ::placeholder {
     color: black;
+    white-space: normal;
+ font-size: 30px;
+    
 }
 
 .hide {
