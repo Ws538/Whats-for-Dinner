@@ -51,7 +51,7 @@ nav > input {
 main {
     width: 100%;
     min-height: 100vh;
-    background-image: url(../images/greenimage.jpeg);
+    background-image: url(../images/paint_grunge_green_124502_2560x1440.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -125,7 +125,7 @@ li {
 }
 .heading-container {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-evenly;
    padding-top: 8em;
    background-color: rgba(0, 0, 0, 0.1);
    backdrop-filter: blur(10px);
@@ -137,6 +137,7 @@ li {
 }
 .heading-container > img {
     float: left;
+    object-fit: contain;
 }
 
 .container > img {
