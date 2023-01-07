@@ -17,25 +17,44 @@ a {
 a:visited {
     color: #A83E3C;
 }
-
+.card {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: all 0.8s;
+}
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
 header {
     width: 100%;
     padding: 2.5em 0;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-green);
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.8s;
     position: fixed;
     z-index: 2;
+    color: black;
+}
+header:hover {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 nav {
     padding: 0 4em;
     display: flex;
     gap: 50px;
     align-items: center;
+
  
 }
 nav > a {
-    color: var(--secondary-red);
     font-size: 1.4rem;
+    color: black;
 }
 nav > input {
     background-color: transparent;
@@ -47,7 +66,10 @@ nav > input {
 main {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--primary-green);
+    background-image: url(../images/greenimage.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     z-index: 1;
 }

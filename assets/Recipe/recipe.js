@@ -1,5 +1,4 @@
-let a =
-  "";
+
 
 const mainDiv = document.querySelector("main");
 
@@ -12,6 +11,25 @@ const showNurients = (nutientObj) => {
   return listItems;
 }
 
+const saveFavouriteToLs = (obj) => {
+  const favourites = JSON.parse(localStorage.getItem('favourites'));
+  if (favourites) {
+    const exists = favourites.find(fav=>{
+      return fav.id === obj.id;
+    });
+    if (exists) return;
+    localStorage.setItem('favourites', JSON.stringify([...favourites, obj]));
+  } else {
+    localStorage.setItem('favourites', JSON.stringify([obj]));
+  }
+}
+
+const initSaveButton = (id, name) => {
+  const btn = document.getElementById('add-to-fav');
+  btn.addEventListener("click", (e) => {
+    saveFavouriteToLs({id, name});
+  })
+}
 
 function showData(recipe) {
   mainDiv.innerHTML = `
@@ -23,12 +41,15 @@ function showData(recipe) {
       <h3>Calories per serving: ${(recipe.calories / recipe.yield).toFixed(0)}</h3>
       <div class="health-labels">
 
-  <div class="labels" >
+    <div class="labels" >
       ${recipe.healthLabels.map(label=>{
           return `${label}, `
       }).join('')}
   </div>
+
   </div>
+  <button id="add-to-fav">Add to Favourites</button>
+  
 </div>
 
 
@@ -43,6 +64,7 @@ function showData(recipe) {
             return `<li>${ingrident}</li>`
           }).join('')}
       </ul>
+      <a href="${recipe.url}">Recipe</a>
   </section>
   <section class="nutrition">
       <h1>Nutrition</h1>
@@ -63,6 +85,7 @@ window.onload = () => {
       .then((res) => res.json())
       .then((data) => {
         showData(data.recipe)
-        console.log(data)
+        initSaveButton(recipeId, data.recipe.label);
       });
+
   };

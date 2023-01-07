@@ -1,6 +1,21 @@
 const baseurl =
   "https://api.edamam.com/api/recipes/v2?app_id=86bfcee4&app_key=28ee446263661df1201ba54d78bd5e1d&type=public";
-
+  const animationObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view')
+      }
+     
+    })
+  }, {
+    threshold: 0.5
+  })
+  const animateCards = (cards) => {
+   
+    cards.forEach(card=>{
+      animationObserver.observe(card); 
+    })
+  }
 const getRecipes = async (url) => {
     let recipes = [];
     await fetch(url)
@@ -26,7 +41,7 @@ const showRecipes = (data) => {
         );
         const recipeId = baseId.substring(baseId.indexOf("/") + 1);
         return `
-        <div class="card" style="background-color: rgba(255, 255, 255, 0.8);">
+        <div class="card hidden">
           <img src="${
             recipe.recipe.images.REGULAR.url
           }" class="card-img-top" alt="">
@@ -53,11 +68,14 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       fetch(nextPage)
         .then((res) => res.json())
-        .then((data) => {
+        .then(async (data) => {
           showRecipes(data);
           lastDiv = document.querySelector(".card:last-child");
           observer.observe(lastDiv);
           observer.unobserve(entry.target);
+          const allCards = document.querySelectorAll('.card');
+          await new Promise(r=>setTimeout(r, 750))
+          animateCards(allCards)
         });
     }
   });
@@ -70,4 +88,6 @@ window.onload = async function () {
     showRecipes(recipes);
     lastDiv = document.querySelector(".card:last-child");
     observer.observe(lastDiv);
+    const allCards = document.querySelectorAll('.card');
+    animateCards(allCards);
   };
