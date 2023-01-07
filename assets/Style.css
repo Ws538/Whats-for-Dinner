@@ -101,13 +101,18 @@ span {
     padding-bottom: 60px;
     
 }
-
-
+h2 {
+    margin-left: 100px;
+    font-size: clamp(2rem, 2vw, 4rem);
+    word-wrap: break-word;
+    white-space: normal;
+}
 
 h1 {
     font-size: clamp(2rem, 2vw, 4rem);
     word-wrap: break-word;
     white-space: normal;
+    
 }
 
 .img-container {
