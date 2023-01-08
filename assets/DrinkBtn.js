@@ -3,11 +3,15 @@ var content = document.querySelector(".content");
 var drinkQuestion1 = document.querySelector("#drinkQuestion1");
 var drinkQuestion2 = document.querySelector('#drinkQuestion2');
 var burgerImage = document.querySelector("#burgerImage");
-var drinksImage = document.querySelector("#drinksImage")
+var drinksImage = document.querySelector("#drinksImage");
+var drinkTileOne = document.getElementById(".TileOne");
+var drinkTileTwo = document.getElementById(".TileTwo");
 
 var firstUserChoice 
 var secondUserChoice 
 var combinedChoices
+var chosenDrink
+var url
 var backButton = document.getElementById("Button");
 var homeButton = document.getElementById("homeButton");
 
@@ -15,7 +19,7 @@ var homeButton = document.getElementById("homeButton");
 // homeButton.classList.remove("hide");
 
 //hide burger image
-burgerImage.classList.remove("hide");
+// burgerImage.classList.remove("hide");
 
 //show drink question 1
 function startDrinkQuestions() {
@@ -60,10 +64,6 @@ function showDrinkOptions(event) {
 }
 
 
-
-
-
-
 //add event listener
 drinkButton.addEventListener("click", startDrinkQuestions);
 
@@ -89,3 +89,26 @@ function startAgain() {
 function openHTML() {
 window.location.pathname = "Index.html";
 }
+
+//add event listeners to drink option tiles to trigger call API function
+drinkTileOne.addEventListener("click", callAPI);
+drinkTileTwo.addEventListener("click", callAPI);
+
+//call API function by passing in ID of the tile that was clicked
+function callAPI(event) {
+    chosenDrink = event.target.id;
+    console.log(chosenDrink);
+    url = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
+}
+
+fetch(url)
+    .then(res => res.json())
+    .then(data) => {
+        displayRecipe();
+      };
+
+// function to display result by opening new html and printing result
+function displayRecipe() {
+
+}
+
