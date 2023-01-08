@@ -91,11 +91,11 @@ window.location.pathname = "Index.html";
 }
 
 //add event listeners to drink option tiles to trigger call API function
-drinkTileOne.addEventListener("click", callAPI);
-drinkTileTwo.addEventListener("click", callAPI);
+drinkTileOne.addEventListener("click", setUpUrl);
+drinkTileTwo.addEventListener("click", setUpUrl);
 
 //call API function by passing in ID of the tile that was clicked
-function callAPI(event) {
+function setUpUrl(event) {
     chosenDrink = event.target.id;
     console.log(chosenDrink);
     url = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
@@ -103,12 +103,13 @@ function callAPI(event) {
 
 fetch(url)
     .then(res => res.json())
-    .then(data) => {
+    .then((data) => {
         displayRecipe();
-      };
+      });
 
 // function to display result by opening new html and printing result
 function displayRecipe() {
-
+    window.location.href = './assets/Drinks/drink-recipe.html';
+    //populate bootstrap card with drink name, image and recipe
 }
 
