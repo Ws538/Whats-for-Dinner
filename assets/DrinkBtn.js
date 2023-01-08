@@ -3,7 +3,7 @@ var content = document.querySelector(".content");
 var drinkQuestion1 = document.querySelector("#drinkQuestion1");
 var drinkQuestion2 = document.querySelector('#drinkQuestion2');
 var burgerImage = document.querySelector("#burgerImage");
-// var drinksImage = document.querySelector("#drinksImage")
+var drinksImage = document.querySelector("#drinksImage")
 
 var firstUserChoice 
 var secondUserChoice 
@@ -21,6 +21,9 @@ burgerImage.classList.remove("hide");
 function startDrinkQuestions() {
   content.classList.add("hide");
   drinkQuestion1.classList.remove("hide");
+  drinksImage.classList.remove("hide")
+  burgerImage.classList.add("hide")
+
 }
 
 //show drink question 2
