@@ -64,6 +64,7 @@ function returnDrinkQuestion1() {
     drinkQuestion2.classList.add("hide");
     drinkQuestion1.classList.remove("hide");
     homeButton.classList.remove("hide");
+    backButton.classList.add("hide");
   }
   
 function startAgain() {
