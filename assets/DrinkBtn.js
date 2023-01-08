@@ -8,7 +8,11 @@ var burgerImage = document.querySelector("#burgerImage");
 var firstUserChoice 
 var secondUserChoice 
 var combinedChoices
-// var healthyBtn = document.querySelector("#healthyBtn");
+var backButton = document.getElementById("Button");
+var homeButton = document.getElementById("homeButton");
+
+// backButton.classList.add("hide");
+// homeButton.classList.remove("hide");
 
 //hide burger image
 burgerImage.classList.remove("hide");
@@ -17,8 +21,6 @@ burgerImage.classList.remove("hide");
 function startDrinkQuestions() {
   content.classList.add("hide");
   drinkQuestion1.classList.remove("hide");
-  burgerImage.classList.add("hide")
-  drinksImage.classList.remove("hide")
 }
 
 //show drink question 2
@@ -28,6 +30,8 @@ function showDrinkQuestion2(event) {
     content.classList.add("hide");
     drinkQuestion1.classList.add("hide");
     drinkQuestion2.classList.remove("hide");
+    homeButton.classList.add("hide");
+    backButton.classList.remove("hide");
 }
 
 //show drink options based on previous two user choices
@@ -59,3 +63,26 @@ function showDrinkOptions(event) {
 
 //add event listener
 drinkButton.addEventListener("click", startDrinkQuestions);
+
+//'go back' button functions
+function returnDrinkQuestion1() {
+    content.classList.add("hide");
+    drinkQuestion2.classList.add("hide");
+    drinkQuestion1.classList.remove("hide");
+    homeButton.classList.remove("hide");
+    backButton.classList.add("hide");
+  }
+  
+function startAgain() {
+    window.location.pathname = "Index.html";
+    // startDrinkQuestions();
+    // showDrinkQuestion2();
+    // content.classList.add("hide");
+    // drinkQuestion2.classList.add("hide");
+    // drinkQuestion1.classList.remove("hide");
+    // homeButton.classList.remove("hide");
+}
+
+function openHTML() {
+window.location.pathname = "Index.html";
+}
