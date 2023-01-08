@@ -12,7 +12,7 @@ var indianFoodTile = document.querySelector("#indianFoodTiles");
 var div5 = document.querySelector("#div5");
 var greekFoodTile = document.querySelector("#greekFoodTiles");
 var div6 = document.querySelector("#div6");
-var chineseFoodTile = document.querySelector("#chineseFoodTiles")
+var chineseFoodTile = document.querySelector("#chineseFoodTiles");
 var idkTile = document.querySelector("#idkTile");
 var cultureTiles = document.querySelector("#cultureTiles");
 var backButton = document.getElementById("Button");
@@ -35,7 +35,7 @@ function startJapChoices() {
 
   greekFoodTile.classList.add("hide");
 
-  chineseFoodTile.classList.add("hide")
+  chineseFoodTile.classList.add("hide");
 
   backButton.classList.remove("hide");
 
@@ -55,7 +55,7 @@ function startMexicanChocies() {
 
   greekFoodTile.classList.add("hide");
 
-  chineseFoodTile.classList.add("hide")
+  chineseFoodTile.classList.add("hide");
 
   backButton.classList.remove("hide");
 
@@ -75,7 +75,7 @@ function startItalianChoices() {
 
   greekFoodTile.classList.add("hide");
 
-  chineseFoodTile.classList.add("hide")
+  chineseFoodTile.classList.add("hide");
 
   homeButton.classList.add("hide");
 
@@ -95,7 +95,7 @@ function startIndianChoices() {
 
   greekFoodTile.classList.add("hide");
 
-  chineseFoodTile.classList.add("hide")
+  chineseFoodTile.classList.add("hide");
 
   homeButton.classList.add("hide");
 
@@ -115,7 +115,7 @@ function startGreekChoices() {
 
   greekFoodTile.classList.remove("hide");
 
-  chineseFoodTile.classList.add("hide")
+  chineseFoodTile.classList.add("hide");
 
   homeButton.classList.add("hide");
 
@@ -123,7 +123,6 @@ function startGreekChoices() {
 }
 
 function startChineseChoices() {
-
   japanFoodTiles.classList.add("hide");
 
   mexicanFoodTile.classList.add("hide");
@@ -136,7 +135,7 @@ function startChineseChoices() {
 
   greekFoodTile.classList.add("hide");
 
-  chineseFoodTile.classList.remove("hide")
+  chineseFoodTile.classList.remove("hide");
 
   homeButton.classList.add("hide");
 
@@ -152,15 +151,13 @@ function openHTML() {
 }
 
 function selectRandomDiv() {
-  
   let rand = Math.floor(Math.random() * 6) + 1;
 
   let div = document.getElementById(`div${rand}`);
 
-  div.click()
+  div.click();
 
-  console.log(div)
-   
+  console.log(div);
 }
 
 div1.addEventListener("click", startJapChoices);
@@ -173,40 +170,48 @@ div4.addEventListener("click", startIndianChoices);
 
 div5.addEventListener("click", startGreekChoices);
 
-div6.addEventListener("click" , startChineseChoices);
+div6.addEventListener("click", startChineseChoices);
 
-idkTile.addEventListener("click" , selectRandomDiv)
-
+idkTile.addEventListener("click", selectRandomDiv);
 
 const getRandomRecipe = async (recipeName) => {
-  let recipe;
-  await fetch(baseurl + `&q=${recipeName}`)
-  .then(res=>res.json())
-  .then(data=>{
-    console.log(data);
-    const randNum = Math.floor(Math.random() * data.hits.length);
-    const randomRecipe = data.hits[randNum];
-    const baseLink = randomRecipe._links.self.href;
-    const baseId = baseLink.substring(
-      baseLink.indexOf("v2"),
-      baseLink.indexOf("?")
-    );
-    const recipeId = baseId.substring(baseId.indexOf("/") + 1);
-    recipe = recipeId;
-  })
-  return recipe;
-}
-
+  let recipe = null;
+  let error = false;
+  await fetch(baseurl + `&q=${recipeName}&diet=low-carb`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      const randNum = Math.floor(Math.random() * data.hits.length);
+      const randomRecipe = data.hits[randNum];
+      const baseLink = randomRecipe._links.self.href;
+      const baseId = baseLink.substring(
+        baseLink.indexOf("v2"),
+        baseLink.indexOf("?")
+      );
+      const recipeId = baseId.substring(baseId.indexOf("/") + 1);
+      recipe = recipeId;
+    })
+    .catch((err) => {
+      error = true;
+      recipe = null;
+    });
+  return { recipe, error };
+};
 
 const initSaveButtons = () => {
-  const allDivs = document.querySelectorAll('.Title');
-  allDivs.forEach(div=>{
-    div.addEventListener('click', async (e) => {
+  const allDivs = document.querySelectorAll(".Title");
+  allDivs.forEach((div) => {
+    div.addEventListener("click", async (e) => {
       const name = e.target.innerText;
-      const recipe = await getRandomRecipe(name);
-       window.location.replace(window.location.origin + `/assets/Recipe/recipe.html?recipe=${recipe}`) 
-    })
-  })
-}
+      const { recipe, error } = await getRandomRecipe(name);
+      if (error) {
+        return;
+      }
+      window.location.replace(
+        window.location.origin + `/assets/Recipe/recipe.html?recipe=${recipe}`
+      );
+    });
+  });
+};
 
 initSaveButtons();
