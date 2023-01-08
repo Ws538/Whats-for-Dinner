@@ -1,4 +1,7 @@
 //make each tile indiviual buttons
+const baseurl =
+  "https://api.edamam.com/api/recipes/v2?app_id=86bfcee4&app_key=28ee446263661df1201ba54d78bd5e1d&type=public";
+
 
 var div1 = document.querySelector("#div1");
 var japanFoodTiles = document.querySelector("#japanFoodTiles");
@@ -175,3 +178,49 @@ div5.addEventListener("click", startGreekChoices);
 div6.addEventListener("click" , startChineseChoices);
 
 idkTile.addEventListener("click" , selectRandomDiv)
+
+
+const getRandomRecipe = async (recipeName) => {
+  let recipe = null;
+  let error = null;
+  await fetch(baseurl + `&q=${recipeName}&diet=high-fiber`)
+  .then(res=>res.json())
+  .then(data=>{
+    console.log(data);
+    const randNum = Math.floor(Math.random() * data.hits.length);
+    const randomRecipe = data.hits[randNum];
+    const baseLink = randomRecipe._links.self.href;
+    const baseId = baseLink.substring(
+      baseLink.indexOf("v2"),
+      baseLink.indexOf("?")
+    );
+    const recipeId = baseId.substring(baseId.indexOf("/") + 1);
+    recipe = recipeId;
+  })
+  .catch(err=>{
+    error = true;
+    recipe = null;
+  })
+  return {recipe, error};;
+}
+
+
+const initSaveButtons = () => {
+  const allDivs = document.querySelectorAll('.Title');
+  allDivs.forEach(div=>{
+    div.addEventListener('click', async (e) => {
+      const name = e.target.innerText;
+      console.log(name);
+      const {recipe, error} = await getRandomRecipe(name);
+      if (recipe) {
+        window.location.replace(window.location.origin + `/assets/Recipe/recipe.html?recipe=${recipe}`) 
+      }
+      if (error) {
+        return;
+      }
+  
+    })
+  })
+}
+
+initSaveButtons();
