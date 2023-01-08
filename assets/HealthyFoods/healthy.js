@@ -180,7 +180,7 @@ idkTile.addEventListener("click" , selectRandomDiv)
 
 const getRandomRecipe = async (recipeName) => {
   let recipe;
-  await fetch(baseurl + `&q=${recipeName}`)
+  await fetch(baseurl + `&q=${recipeName}&diet=low-carb`)
   .then(res=>res.json())
   .then(data=>{
     console.log(data);

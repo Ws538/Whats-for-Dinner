@@ -15,31 +15,21 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    background-color: #a6fa9b;
     
 }
 a {
     text-decoration: none;
+    color: black;
 }
 a:visited {
     color: var(--secondary-red);
+
 }
 
 /* 
     Bottom right red circle
 */
-main::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#8c2525f6, #e06363);
-    clip-path: circle(50% at right 100%);
-    z-index: 0;
-}
+
 
 /* 
     Nav/header
@@ -49,35 +39,68 @@ header {
     padding: 2.5em 0;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
+    z-index: 2;
+    background-color: transparent;
 }
 nav {
     padding: 0 4em;
     display: flex;
     gap: 50px;
-    
+    background-color: transparent;
 }
 nav > a {
-    color: var(--secondary-red);
+    background-color: transparent;
     font-size: 1.4rem;
+    color: black;
+}
+nav > a:visited {
+    color: black;
 }
 
 main {
-    padding-left:100px;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/paint_grunge_green_124502_2560x1440.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1{ 
-    padding-top:200px;
+  
     display:flex;
     
 }
-
+li > a {
+    text-decoration: underline;
+}
 li {
     list-style-type:none;
 }
 
 .div1 {
     display: flex;
-    
+    flex-direction: column;
+    font-size: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 6em;
+}
+
+@media screen and (max-width: 420px) {
+   .div1 {
+    margin-top: 6em;
+   } 
+}
+@media screen and (max-height: 880px) {
+    .div1 {
+        margin-top: 6em;
+       } 
 }
 
 
