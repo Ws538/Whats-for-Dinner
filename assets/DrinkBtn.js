@@ -96,9 +96,9 @@ drinkTileTwo.addEventListener("click", setUpUrl);
 
 //call API function by passing in ID of the tile that was clicked
 function setUpUrl(event) {
-    chosenDrink = event.target.id;
+    chosenDrink = event.target.innerHTML;
     console.log(chosenDrink);
-    url = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
+    url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
 }
 
 fetch(url)
@@ -111,5 +111,9 @@ fetch(url)
 function displayRecipe() {
     window.location.href = './assets/Drinks/drink-recipe.html';
     //populate bootstrap card with drink name, image and recipe
+    //drink name = drinks[0].strDrink
+    //drink image = drinks[0].strDrinkThumb
+    //drink ingredients = drinks[0].strIngredient1 (loop through numbers +1 until null?)
+    //drink instructions = drinks[0].strInstructions
 }
 
