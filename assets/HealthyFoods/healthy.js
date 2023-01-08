@@ -178,3 +178,35 @@ div6.addEventListener("click" , startChineseChoices);
 idkTile.addEventListener("click" , selectRandomDiv)
 
 
+const getRandomRecipe = async (recipeName) => {
+  let recipe;
+  await fetch(baseurl + `&q=${recipeName}&diet=low-carb`)
+  .then(res=>res.json())
+  .then(data=>{
+    console.log(data);
+    const randNum = Math.floor(Math.random() * data.hits.length);
+    const randomRecipe = data.hits[randNum];
+    const baseLink = randomRecipe._links.self.href;
+    const baseId = baseLink.substring(
+      baseLink.indexOf("v2"),
+      baseLink.indexOf("?")
+    );
+    const recipeId = baseId.substring(baseId.indexOf("/") + 1);
+    recipe = recipeId;
+  })
+  return recipe;
+}
+
+
+const initSaveButtons = () => {
+  const allDivs = document.querySelectorAll('.Title');
+  allDivs.forEach(div=>{
+    div.addEventListener('click', async (e) => {
+      const name = e.target.innerText;
+      const recipe = await getRandomRecipe(name);
+       window.location.replace(window.location.origin + `/assets/Recipe/recipe.html?recipe=${recipe}`) 
+    })
+  })
+}
+
+initSaveButtons();
