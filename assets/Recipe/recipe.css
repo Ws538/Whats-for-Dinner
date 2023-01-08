@@ -51,7 +51,7 @@ nav > input {
 main {
     width: 100%;
     min-height: 100vh;
-    background-image: url(../images/greenimage.jpeg);
+    background-image: url(../images/paint_grunge_green_124502_2560x1440.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -129,7 +129,8 @@ li {
    padding-top: 8em;
    background-color: rgba(0, 0, 0, 0.1);
    backdrop-filter: blur(10px);
-   min-width: 1240px;
+   width: 100%;
+   max-width: 1240px;
    gap: 20px;
    border-bottom: 1px solid var(--secondary-red);
    padding-bottom: 2em;
