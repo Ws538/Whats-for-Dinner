@@ -90,13 +90,10 @@ function openHTML() {
 window.location.pathname = "Index.html";
 }
 
-//add event listeners to drink option tiles to trigger call API function
-drinkTileOne?.addEventListener("click", setUpUrl);
-drinkTileTwo?.addEventListener("click", setUpUrl);
 
 //call API function by passing in ID of the tile that was clicked
 function setUpUrl(event) {
-    chosenDrink = event.target.secondChild.nodeValue;
+    chosenDrink = event.target.childNodes[1].nodeValue;
     console.log(chosenDrink);
     url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
     testing();
@@ -122,3 +119,6 @@ function displayRecipe() {
     //drink instructions = drinks[0].strInstructions
 }
 
+//add event listeners to drink option tiles to trigger call API function
+drinkTileOne?.addEventListener("click", setUpUrl);
+drinkTileTwo?.addEventListener("click", setUpUrl);
