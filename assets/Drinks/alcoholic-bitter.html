@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./drinks.css" rel="stylesheet" />
+    <title>Bitter Alcoholic Drinks</title>
 </head>
 <body>
-    <p>Negroni</p>
-    <p>Paloma</p>
+    <button onclick="startAgain()" id="Button">Start Again</button>
+    <div id="drinkTiles">
+        <div class="TileOne" id="hoverEffect">
+            <img src="./DrinkImages/negroni.jpg" />
+            <p>Negroni</p>
+        </div>
+        <div class="TileTwo" id="hoverEffect">
+            <img src="./DrinkImages/paloma.jpg">
+            <p>Paloma</p>
+        </div>
+    </div>
 </body>
+<script src="../DrinkBtn.js"></script>
 </html>

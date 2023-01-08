@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./drinks.css" rel="stylesheet" />
+    <title>Sweet Alcoholic Drinks</title>
 </head>
 <body>
-    <p>Mojito</p>
-    <p>Long Island Iced Tea</p>
+    <button onclick="startAgain()" id="Button">Start Again</button>
+    <div id="drinkTiles">
+        <div class="TileOne" id="hoverEffect">
+            <img src="./DrinkImages/mojito.jpg" />
+            <p>Mojito</p>
+        </div>
+        <div class="TileTwo" id="hoverEffect">
+            <img src="./DrinkImages/longislandicedtea.jpg">
+            <p>Long Island Iced Tea</p>
+        </div>
+    </div>
 </body>
+<script src="../DrinkBtn.js"></script>
 </html>
