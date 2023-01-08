@@ -227,3 +227,26 @@ h1 {
         font-size: 1.2rem;
     }
 }
+
+#Button, #homeButton {
+    background: linear-gradient(to right,#8c2525f6, #e06363);
+    border: none;
+    font-size: clamp(2rem, 1vw, 3rem);
+    padding: 0.8em 2em;
+    margin-left:50px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s; 
+    color: rgb(0, 0, 0);            
+    box-shadow: 10px 20px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+  
+    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 20% 99%, 0% 50%, 20% 0%);
+  }
+
+  #Button:hover, #homeButton:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 300ms ease;
+  }
