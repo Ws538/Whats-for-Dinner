@@ -1,6 +1,4 @@
 //make each tile indiviual buttons
-const baseurl =
-  "https://api.edamam.com/api/recipes/v2?app_id=86bfcee4&app_key=28ee446263661df1201ba54d78bd5e1d&type=public";
 
 var div1 = document.querySelector("#div1");
 var japanFoodTiles = document.querySelector("#japanFoodTiles");
@@ -160,7 +158,6 @@ function selectRandomDiv() {
 
   console.log(div);
 }
-
 div1.addEventListener("click", startJapChoices);
 
 div2.addEventListener("click", startMexicanChocies);
@@ -215,5 +212,8 @@ const initSaveButtons = () => {
     });
   });
 };
+
+
+idkTile.addEventListener("click" , selectRandomDiv)
 
 initSaveButtons();
