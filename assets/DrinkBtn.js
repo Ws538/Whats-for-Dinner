@@ -65,7 +65,7 @@ function showDrinkOptions(event) {
 
 
 //add event listener
-drinkButton.addEventListener("click", startDrinkQuestions);
+drinkButton?.addEventListener("click", startDrinkQuestions);
 
 //'go back' button functions
 function returnDrinkQuestion1() {
@@ -91,21 +91,26 @@ window.location.pathname = "Index.html";
 }
 
 //add event listeners to drink option tiles to trigger call API function
-drinkTileOne.addEventListener("click", setUpUrl);
-drinkTileTwo.addEventListener("click", setUpUrl);
+drinkTileOne?.addEventListener("click", setUpUrl);
+drinkTileTwo?.addEventListener("click", setUpUrl);
 
 //call API function by passing in ID of the tile that was clicked
 function setUpUrl(event) {
-    chosenDrink = event.target.innerHTML;
+    chosenDrink = event.target.secondChild.nodeValue;
     console.log(chosenDrink);
     url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
+    testing();
 }
 
-fetch(url)
-    .then(res => res.json())
-    .then((data) => {
-        displayRecipe();
-      });
+function testing() {
+    fetch(url)
+    .then(res => res.text())
+    .then(data => console.log(data))
+} 
+    
+    // ((data) => {
+    //     displayRecipe();
+    //   });
 
 // function to display result by opening new html and printing result
 function displayRecipe() {
