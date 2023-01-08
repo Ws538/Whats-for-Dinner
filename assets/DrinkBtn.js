@@ -66,6 +66,16 @@ function returnDrinkQuestion1() {
     homeButton.classList.remove("hide");
   }
   
+function startAgain() {
+    window.location.pathname = "Index.html";
+    // startDrinkQuestions();
+    // showDrinkQuestion2();
+    // content.classList.add("hide");
+    // drinkQuestion2.classList.add("hide");
+    // drinkQuestion1.classList.remove("hide");
+    // homeButton.classList.remove("hide");
+}
+
 function openHTML() {
 window.location.pathname = "Index.html";
 }
