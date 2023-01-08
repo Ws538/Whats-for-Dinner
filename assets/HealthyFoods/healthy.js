@@ -175,7 +175,8 @@ div6.addEventListener("click", startChineseChoices);
 idkTile.addEventListener("click", selectRandomDiv);
 
 const getRandomRecipe = async (recipeName) => {
-  let recipe;
+  let recipe = null;
+  let error = false;
   await fetch(baseurl + `&q=${recipeName}&diet=low-carb`)
   .then(res=>res.json())
   .then(data=>{
@@ -190,7 +191,11 @@ const getRandomRecipe = async (recipeName) => {
     const recipeId = baseId.substring(baseId.indexOf("/") + 1);
     recipe = recipeId;
   })
-  return recipe;
+  .catch(err=>{
+    error = true;
+    recipe = null;
+  })
+  return {recipe, error};
 }
 
 
