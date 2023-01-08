@@ -3,6 +3,8 @@ var content = document.querySelector(".content");
 var drinkQuestion1 = document.querySelector("#drinkQuestion1");
 var drinkQuestion2 = document.querySelector('#drinkQuestion2');
 var burgerImage = document.querySelector("#burgerImage");
+// var drinksImage = document.querySelector("#drinksImage")
+
 var firstUserChoice 
 var secondUserChoice 
 var combinedChoices
@@ -19,7 +21,6 @@ burgerImage.classList.remove("hide");
 function startDrinkQuestions() {
   content.classList.add("hide");
   drinkQuestion1.classList.remove("hide");
-  homeButton.classList.remove("hide");
 }
 
 //show drink question 2
@@ -54,6 +55,11 @@ function showDrinkOptions(event) {
             break;
     }
 }
+
+
+
+
+
 
 //add event listener
 drinkButton.addEventListener("click", startDrinkQuestions);
