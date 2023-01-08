@@ -51,7 +51,7 @@ p {
 
 /* hover effects */
   
-  /* #hoverEffect {
+  #hoverEffect {
     box-shadow: 10px 20px 10px 0 rgba(0, 0, 0, 0.336);
   }
   
@@ -60,14 +60,5 @@ p {
     cursor: pointer;
     transition: transform 300ms ease;
   }
-  
-  #drinkTiles > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 800ms ease, transform 800ms ease;
-  } */
   
   
