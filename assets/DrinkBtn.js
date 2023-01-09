@@ -92,14 +92,14 @@ window.location.pathname = "Index.html";
 
 
 //call API function by passing in ID of the tile that was clicked
-function setUpUrl(event) {
+function setupUrl(event) {
     chosenDrink = event.target.childNodes[1].nodeValue;
     console.log(chosenDrink);
     url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
-    testing();
+    putFetchInFunction();
 }
 
-function testing() {
+function putFetchInFunction() {
     fetch(url)
     .then(res => res.text())
     .then(data => console.log(data))
@@ -120,5 +120,5 @@ function displayRecipe() {
 }
 
 //add event listeners to drink option tiles to trigger call API function
-drinkTileOne?.addEventListener("click", setUpUrl);
-drinkTileTwo?.addEventListener("click", setUpUrl);
+drinkTileOne.addEventListener("click", setupUrl);
+drinkTileTwo.addEventListener("click", setupUrl);
