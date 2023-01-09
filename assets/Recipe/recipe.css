@@ -153,3 +153,25 @@ li {
     min-width: 20em;
     max-width: 20em;
 }
+@media screen and (max-width: 760px) {
+    .heading-container {
+        flex-direction: column;
+    }
+    .heading-container > img {
+        max-width: 50%;
+        margin: auto;
+    }
+    
+}
+@media screen and (max-width: 530px) {
+    * {
+        font-size: 1em;
+    }
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    section {
+        padding: 0;
+    }
+}

@@ -49,20 +49,23 @@ nav {
     display: flex;
     gap: 50px;
     align-items: center;
-
- 
 }
-nav > a {
+nav > div {
+    display: flex;
+    gap: 40px;
+}
+nav > div >  a {
     font-size: 1.4rem;
     color: black;
 }
-nav > input {
+nav > div > input {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
     padding-left: 1em;
     font-size: 1.4em;
 }
+
 .error {
     position: absolute;
     width: 100%;
@@ -96,6 +99,8 @@ main {
     gap: 20px;
     padding-left: 8em;
     padding-right: 8em;
+    align-items: center;
+    justify-content: center;
    
 }
 
@@ -114,4 +119,40 @@ main {
     transition: all 0.5s;
     opacity: 0;
 
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+@media screen and (max-width: 750px) {
+    .grid-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .search {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px) {
+    .grid-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        width: 90vw;
+    }
+    header {
+        padding:0; 
+        padding: 1em 0;
+    }
+    nav {
+        flex-direction: column;
+        padding: 0;
+    }
+    nav > div > input {
+        font-size: 1.2em;
+        margin-left: 20px;
+    }
+   
 }
