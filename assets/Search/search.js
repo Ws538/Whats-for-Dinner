@@ -149,6 +149,7 @@ searchButton.addEventListener("click", async (e) => {
   const url = new URL(window.location);
   url.searchParams.set("q", searchParam);
   window.history.pushState(null, "", url.toString());
+  $('.grid-items').html('');
   saveSearchToLS(searchParam);
   getAndShowRecipes(searchParam);
 });
