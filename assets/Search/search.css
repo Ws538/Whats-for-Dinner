@@ -13,10 +13,10 @@
 }
 a {
     text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
 }
-a:visited {
-    color: #A83E3C;
-}
+
 .card {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
