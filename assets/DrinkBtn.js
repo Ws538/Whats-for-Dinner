@@ -4,8 +4,9 @@ var drinkQuestion1 = document.querySelector("#drinkQuestion1");
 var drinkQuestion2 = document.querySelector('#drinkQuestion2');
 var burgerImage = document.querySelector("#burgerImage");
 var drinksImage = document.querySelector("#drinksImage");
-var drinkTileOne = document.getElementById(".TileOne");
-var drinkTileTwo = document.getElementById(".TileTwo");
+var drinkTileOne = document.querySelector(".TileOne");
+var drinkTileTwo = document.querySelector(".TileTwo");
+console.log(drinkTileOne);
 
 var firstUserChoice 
 var secondUserChoice 
@@ -91,27 +92,9 @@ window.location.pathname = "Index.html";
 }
 
 
-//call API function by passing in ID of the tile that was clicked
-function setupUrl(event) {
-    chosenDrink = event.target.childNodes[1].nodeValue;
-    console.log(chosenDrink);
-    url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + chosenDrink;
-    putFetchInFunction();
-}
-
-function putFetchInFunction() {
-    fetch(url)
-    .then(res => res.text())
-    .then(data => console.log(data))
-} 
-    
-    // ((data) => {
-    //     displayRecipe();
-    //   });
-
-// function to display result by opening new html and printing result
 function displayRecipe() {
-    window.location.href = './assets/Drinks/drink-recipe.html';
+    window.location.href = './drink-recipe.html?name=paloma';
+    // send query like drink name = 
     //populate bootstrap card with drink name, image and recipe
     //drink name = drinks[0].strDrink
     //drink image = drinks[0].strDrinkThumb
@@ -119,6 +102,10 @@ function displayRecipe() {
     //drink instructions = drinks[0].strInstructions
 }
 
-//add event listeners to drink option tiles to trigger call API function
+// add event listeners to drink option tiles to trigger call API function
 drinkTileOne.addEventListener("click", setupUrl);
 drinkTileTwo.addEventListener("click", setupUrl);
+
+//add event listeners to drink option tiles to trigger call API function
+// drinkTileOne.addEventListener("click", setupUrl);
+// drinkTileTwo.addEventListener("click", setupUrl);
