@@ -24,7 +24,6 @@ function putFetchInFunction() {
 putFetchInFunction();
 
 
-
 // function to display result by opening new html and printing result
 function displayRecipe() {
     window.location.href = './drink-recipe.html?name=paloma';
@@ -35,7 +34,3 @@ function displayRecipe() {
     //drink ingredients = drinks[0].strIngredient1 (loop through numbers +1 until null?)
     //drink instructions = drinks[0].strInstructions
 }
-
-//add event listeners to drink option tiles to trigger call API function
-// drinkTileOne.addEventListener("click", setupUrl);
-// drinkTileTwo.addEventListener("click", setupUrl);
