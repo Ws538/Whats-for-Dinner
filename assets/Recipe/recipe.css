@@ -11,12 +11,9 @@
     font-family: 'Poppins', sans-serif;
     
 }
-a {
-    text-decoration: none;
-}
-a:visited {
-    color: #A83E3C;
-}
+
+    
+
 
 header {
     width: 100%;
@@ -28,7 +25,7 @@ header {
     transition: background-color 0.8s;
 }
 header:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.364);
 }
 nav {
     padding: 0 4em;
@@ -38,8 +35,9 @@ nav {
  
 }
 nav > a {
-    color: var(--secondary-red);
+    color: black;
     font-size: 1.4rem;
+    text-decoration: none;
 }
 nav > input {
     background-color: transparent;
