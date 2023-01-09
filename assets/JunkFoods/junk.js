@@ -177,7 +177,7 @@ idkTile.addEventListener("click", selectRandomDiv);
 const getRandomRecipe = async (recipeName) => {
   let recipe = null;
   let error = null;
-  await fetch(baseurl + `&q=${recipeName}&diet=high-fiber`)
+  await fetch(baseurl + `&q=${recipeName}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
