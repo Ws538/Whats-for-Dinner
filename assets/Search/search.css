@@ -80,6 +80,10 @@ nav > div > input {
     opacity: 0;
     transition: all 1s;
 }
+.error-show {
+    opacity: 1;
+    transform: translateY(0);
+}
 main {
     width: 100%;
     min-height: 100vh;

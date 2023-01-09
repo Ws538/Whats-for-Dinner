@@ -33,12 +33,9 @@ const animateCards = (cards) => {
 
 const showError = async (message) => {
   const errorDiv = document.querySelector(".error");
-  errorDiv.childNodes[1].innerText = message;
-  errorDiv.style.transform = "translateY(0)";
-  errorDiv.style.opacity = 1;
+  errorDiv.classList.add('error-show')
   await new Promise((r) => setTimeout(r, 2000));
-  errorDiv.style.transform = "translateY(-200px)";
-  errorDiv.style.opacity = 0;
+  errorDiv.classList.remove('error-show');
 };
 const getRecipes = async (url) => {
   let recipes = [];
