@@ -92,14 +92,10 @@ window.location.pathname = "Index.html";
 }
 
 
-function displayRecipe() {
-    window.location.href = './drink-recipe.html?name=paloma';
-    // send query like drink name = 
-    //populate bootstrap card with drink name, image and recipe
-    //drink name = drinks[0].strDrink
-    //drink image = drinks[0].strDrinkThumb
-    //drink ingredients = drinks[0].strIngredient1 (loop through numbers +1 until null?)
-    //drink instructions = drinks[0].strInstructions
+function displayRecipe(event) {
+    let choiceOfDrink = event.target.innerText;
+    let searchTerm = './drink-recipe.html?name=' + choiceOfDrink
+    window.location.href = searchTerm;
 }
 
 // add event listeners to drink option tiles to trigger call API function
