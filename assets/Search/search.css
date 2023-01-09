@@ -65,6 +65,11 @@ nav > div > input {
     padding-left: 1em;
     font-size: 1.4em;
 }
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .error {
     position: absolute;
@@ -157,6 +162,9 @@ main {
     nav > div > input {
         font-size: 1.2em;
         margin-left: 20px;
+    }
+    .links {
+        flex-direction: column;
     }
    
 }
