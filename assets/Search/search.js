@@ -92,7 +92,9 @@ const observer = new IntersectionObserver((entries) => {
           .then(async (data) => {
             showRecipes(data);
             lastDiv = document.querySelector(".card:last-child");
-            observer.observe(lastDiv);
+            if (lastDiv){
+              observer.observe(lastDiv);
+            }
             observer.unobserve(entry.target);
             const allCards = document.querySelectorAll(".card");
             await new Promise((r) => setTimeout(r, 750));
@@ -113,7 +115,9 @@ window.onload = async function () {
   }
   showRecipes(recipes);
   lastDiv = document.querySelector(".card:last-child");
-  observer.observe(lastDiv);
+  if (lastDiv){
+    observer.observe(lastDiv);
+  }
   const allCards = document.querySelectorAll('.card');
   animateCards(allCards);
 };

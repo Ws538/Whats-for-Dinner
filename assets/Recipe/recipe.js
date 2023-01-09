@@ -81,11 +81,16 @@ function showData(recipe) {
 window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const recipeId = urlParams.get("recipe");
-    fetch(`https://api.edamam.com/api/recipes/v2/${recipeId}?app_id=86bfcee4&app_key=28ee446263661df1201ba54d78bd5e1d&type=public`)
+    if (recipeId) {
+      fetch(`https://api.edamam.com/api/recipes/v2/${recipeId}?app_id=86bfcee4&app_key=28ee446263661df1201ba54d78bd5e1d&type=public`)
       .then((res) => res.json())
       .then((data) => {
         showData(data.recipe)
         initSaveButton(recipeId, data.recipe.label);
       });
+    } else {
+      window.location.replace(window.location.origin + '/index.html');
+    }
+ 
 
   };
