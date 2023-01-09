@@ -41,7 +41,6 @@ const getRecipes = async (url) => {
       }
     })
     .catch((err) => {
-      console.log(err);
       error = true;
       recipes = [];
     });
@@ -98,7 +97,7 @@ const observer = new IntersectionObserver((entries) => {
             const allCards = document.querySelectorAll(".card");
             await new Promise((r) => setTimeout(r, 750));
             animateCards(allCards);
-          });
+          })
       }
     }
   });
@@ -108,7 +107,6 @@ window.onload = async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const searchParam = urlParams.get("q");
   const { recipes, error } = await getRecipes(baseurl + `&q=${searchParam}`);
-  console.log(recipes, error);
   if (error) {
     await showError("Server error");
     return;
