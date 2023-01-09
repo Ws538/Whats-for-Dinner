@@ -3,11 +3,16 @@ var content = document.querySelector(".content");
 var drinkQuestion1 = document.querySelector("#drinkQuestion1");
 var drinkQuestion2 = document.querySelector('#drinkQuestion2');
 var burgerImage = document.querySelector("#burgerImage");
-var drinksImage = document.querySelector("#drinksImage")
+var drinksImage = document.querySelector("#drinksImage");
+var drinkTileOne = document.querySelector(".TileOne");
+var drinkTileTwo = document.querySelector(".TileTwo");
+console.log(drinkTileOne);
 
 var firstUserChoice 
 var secondUserChoice 
 var combinedChoices
+var chosenDrink
+var url
 var backButton = document.getElementById("Button");
 var homeButton = document.getElementById("homeButton");
 
@@ -15,7 +20,7 @@ var homeButton = document.getElementById("homeButton");
 // homeButton.classList.remove("hide");
 
 //hide burger image
-burgerImage.classList.remove("hide");
+// burgerImage.classList.remove("hide");
 
 //show drink question 1
 function startDrinkQuestions() {
@@ -60,12 +65,8 @@ function showDrinkOptions(event) {
 }
 
 
-
-
-
-
 //add event listener
-drinkButton.addEventListener("click", startDrinkQuestions);
+drinkButton?.addEventListener("click", startDrinkQuestions);
 
 //'go back' button functions
 function returnDrinkQuestion1() {
@@ -89,3 +90,18 @@ function startAgain() {
 function openHTML() {
 window.location.pathname = "Index.html";
 }
+
+
+function displayRecipe() {
+    window.location.href = './drink-recipe.html?name=paloma';
+    // send query like drink name = 
+    //populate bootstrap card with drink name, image and recipe
+    //drink name = drinks[0].strDrink
+    //drink image = drinks[0].strDrinkThumb
+    //drink ingredients = drinks[0].strIngredient1 (loop through numbers +1 until null?)
+    //drink instructions = drinks[0].strInstructions
+}
+
+// add event listeners to drink option tiles to trigger call API function
+drinkTileOne.addEventListener("click", setupUrl);
+drinkTileTwo.addEventListener("click", setupUrl);
