@@ -63,6 +63,20 @@ nav > input {
     padding-left: 1em;
     font-size: 1.4em;
 }
+.error {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    background-color: var(--secondary-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    color: white;
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: all 1s;
+}
 main {
     width: 100%;
     min-height: 100vh;
