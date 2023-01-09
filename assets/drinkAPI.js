@@ -4,19 +4,16 @@ console.log(drinkName);
 url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drinkName;
 const drinkImgDisplay = document.querySelector('img');
 const drinkNameDisplay = document.querySelector('h1');
-const drinkIngredientsDisplay = document.querySelector('ol');
+const drinkIngredientsListEl = document.querySelector('ol');
 const drinkInstructionsDisplay = document.querySelector('p');
 
-function putFetchInFunction() {
+function callAPI() {
     fetch(url)
     .then(res => res.json())
     // .then(data => console.log(data))
     .then((data) => {
         displayRecipe(data)
       });
-    // .then((data) => {
-    //     // displayRecipe();
-    //   });
 } 
 
 // function to display result by populating page with recipe details
@@ -24,17 +21,27 @@ function displayRecipe(drinks) {
     drinkImgDisplay.setAttribute('src', drinks.drinks[0].strDrinkThumb);
     drinkNameDisplay.innerHTML = drinks.drinks[0].strDrink;
     drinkInstructionsDisplay.innerHTML = drinks.drinks[0].strInstructions;
-    //drinkIngredientsDisplay = drinks.drinks[0].strIngredient1 (loop through numbers +1 until null?)
+    listIngredients(drinks);
 }
 
-function listIngredients() {
-    for (let i = 0; i < ; i++)
-    const ingredientItem = document.createElement('list item');
-    ingredientItem.innerHTML = drinks.drinks[0].strIngredient1;
-    drinkIngredientsDisplay.appendChild(ingredientItem);
-}
 
-putFetchInFunction();
+function listIngredients(currentDrinks) {
+    const currentDrink = currentDrinks.drinks[0];
+    for (let i = 1; i < 10 ; i++) {
+        const ingredientKey = 'strIngredient' + i
+        const ingredientName = currentDrink[ingredientKey];
+
+        if(!ingredientName){
+            return
+        }
+
+        const ingredientItem = document.createElement('li');
+        ingredientItem.innerHTML = ingredientName;
+        drinkIngredientsListEl.appendChild(ingredientItem);
+    } 
+ }
+
+callAPI();
 
 //call API function by passing in ID of the tile that was clicked
 // function setupUrl(event) {
