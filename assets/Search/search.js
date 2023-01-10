@@ -135,9 +135,14 @@ window.onload = async function () {
 const saveSearchToLS = (search) => {
   const ls = JSON.parse(localStorage.getItem("recent"));
   if (ls) {
-    localStorage.setItem("recent", JSON.stringify([...ls, search]));
+    const exists = ls.find(item=>{
+      return item === search;
+    })
+    console.log(exists)
+    if (exists) return;
+    localStorage.setItem("recent", JSON.stringify([...ls, search.toLowerCase()]));
   } else {
-    localStorage.setItem("recent", JSON.stringify([search]));
+    localStorage.setItem("recent", JSON.stringify([search.toLowerCase()]));
   }
 };
 searchButton.addEventListener("click", async (e) => {

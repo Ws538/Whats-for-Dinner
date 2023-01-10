@@ -4,9 +4,13 @@ const searchButton = document.getElementById('search-btn');
 const saveSearchToLS = (search) => {
     const ls = JSON.parse(localStorage.getItem('recent'));
     if (ls) {
-        localStorage.setItem('recent', JSON.stringify([...ls, search]));
+        const exits = ls.find(item=>{
+            return item === search;
+        })
+        if (exits) return;
+        localStorage.setItem('recent', JSON.stringify([...ls, search.toLowerCase()]));
     } else {
-        localStorage.setItem('recent', JSON.stringify([search]));
+        localStorage.setItem('recent', JSON.stringify([search.toLowerCase()]));
     }
 }
 

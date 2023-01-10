@@ -81,6 +81,9 @@ li > a {
 }
 li {
     list-style-type:none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .div1 {
@@ -93,10 +96,23 @@ li {
     
  
 }
+.delete-btn {
+    background-color: var(--secondary-red);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0 1em;
+    cursor: pointer;
+    max-height: 2em;
+    border-radius: 10px;
+}
 .div1 > ul {
     overflow-y: scroll;
     max-height: 10em;
     padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
 }
 
 @media screen and (max-width: 420px) {
