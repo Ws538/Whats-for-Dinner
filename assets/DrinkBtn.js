@@ -74,13 +74,7 @@ function returnDrinkQuestion1() {
   }
   
 function startAgain() {
-    window.location.href = "/Whats-for-Dinner/";
-    // startDrinkQuestions();
-    // showDrinkQuestion2();
-    // content.classList.add("hide");
-    // drinkQuestion2.classList.add("hide");
-    // drinkQuestion1.classList.remove("hide");
-    // homeButton.classList.remove("hide");
+    window.location.pathname = "../index.html";
 }
 
 function openHTML() {
