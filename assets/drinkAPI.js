@@ -17,15 +17,18 @@ function callAPI() {
 
 // function to display result by populating page with recipe details
 function displayRecipe(drinks) {
-    drinkImgDisplay.setAttribute('src', drinks.drinks[0].strDrinkThumb);
-    drinkNameDisplay.innerHTML = drinks.drinks[0].strDrink;
-    drinkInstructionsDisplay.innerHTML = drinks.drinks[0].strInstructions;
-    listIngredients(drinks);
+    console.log(drinks)
+    const randomDrinkIndex = Math.floor(Math.random() * drinks.drinks.length);
+    const drink = drinks.drinks[randomDrinkIndex];
+    drinkImgDisplay.setAttribute('src', drink.strDrinkThumb);
+    drinkNameDisplay.innerHTML = drink.strDrink;
+    drinkInstructionsDisplay.innerHTML = drink.strInstructions;
+    listIngredients(drink);
 }
 
 
 function listIngredients(currentDrinks) {
-    const currentDrink = currentDrinks.drinks[0];
+    const currentDrink = currentDrinks;
     for (let i = 1; i < 10 ; i++) {
         const ingredientKey = 'strIngredient' + i
         const ingredientName = currentDrink[ingredientKey];
