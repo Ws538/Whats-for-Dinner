@@ -143,12 +143,12 @@ function startChineseChoices() {
   backButton.classList.remove("hide");
 }
 
-function openJunkHTML() {
+function openjunkHTML() {
   window.location.href = "./Junk.html";
 }
 
 function openHTML() {
-  window.location.pathname = "Index.html";
+  window.location.pathname = "index.html";
 }
 
 function selectRandomDiv() {
