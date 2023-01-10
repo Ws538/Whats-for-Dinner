@@ -148,7 +148,7 @@ function openjunkHTML() {
 }
 
 function openHTML() {
-  window.location.pathname = "Index.html";
+  window.location.pathname = "index.html";
 }
 
 function selectRandomDiv() {

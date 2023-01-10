@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url(/assets/images/paint_grunge_green_124502_2560x1440.jpg);
+  background-image: url(./assets/images/paint_grunge_green_124502_2560x1440.jpg);
   background-size: inherit;
 }
 
@@ -82,7 +82,7 @@ img {
 
 /* cuisine tiles */
 .tile:nth-child(1) {
-  background-image: url(/assets/HealthyFoods/FoodImages/Japan-Flag.jpeg);
+  background-image: url(./assets/HealthyFoods/FoodImages/Japan-Flag.jpeg);
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -91,7 +91,7 @@ img {
 }
 
 .tile:nth-child(2) {
-  background-image: url(/assets/HealthyFoods/FoodImages/mexicanflag.jpeg);
+  background-image: url(./assets/HealthyFoods/FoodImages/mexicanflag.jpeg);
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -100,7 +100,7 @@ img {
 }
 
 .tile:nth-child(3) {
-  background-image: url(/assets/HealthyFoods/FoodImages/italianFlag.jpeg);
+  background-image: url(./assets/HealthyFoods/FoodImages/italianFlag.jpeg);
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -109,7 +109,7 @@ img {
 }
 
 .tile:nth-child(4) {
-  background-image: url(/assets/HealthyFoods/FoodImages/Indian-flag.png);
+  background-image: url(./assets/HealthyFoods/FoodImages/Indian-flag.png);
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -118,7 +118,7 @@ img {
 }
 
 .tile:nth-child(5) {
-  background-image: url(/assets/HealthyFoods/FoodImages/greekFlag.webp);
+  background-image: url(./assets/HealthyFoods/FoodImages/greekFlag.webp);
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -127,7 +127,7 @@ img {
 }
 
 .tile:nth-child(6) {
-  background-image: url(/assets/HealthyFoods/FoodImages/chineseflag.jpeg);
+  background-image: url(./assets/HealthyFoods/FoodImages/chineseflag.jpeg);
   background-size: cover;
   height: 19%;
   width: 22%;
@@ -136,7 +136,7 @@ img {
 }
 
 .tile:nth-child(7) {
-  background-image: url(/assets/HealthyFoods/FoodImages/confused.png);
+  background-image: url(./assets/HealthyFoods/FoodImages/confused.png);
   background-size: cover;
   height: 19%;
   width: 22%;
