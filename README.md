@@ -16,7 +16,7 @@ Having said that, much was learnt from this collab project and we are excited to
 
 ## Delployed Link 
 
-link : 
+link : https://ws538.github.io/Whats-for-Dinner/
 
 # Credits
 
@@ -53,3 +53,11 @@ There are 6 cuisines to choose from, or a randomised selection button in the mid
 Clicking into a dish will show the recipe and nutrients.
 
 ![dishdetails](/assets/images/Screenshot5.png)
+
+Similar story with drinks, choosing "alcholic or non-alcholoic" , "sweet or bitters" and slecting a choise of drinks shows the ingredients and method to make. 
+
+![drinks1](/assets/images/drinks1.png)
+![drinks2](/assets/images/drinks2.png)
+![drinks3](/assets/images/drinks3.png)
+![drinks4](/assets/images/drinks4.png)
+
