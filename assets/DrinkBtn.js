@@ -6,7 +6,6 @@ var burgerImage = document.querySelector("#burgerImage");
 var drinksImage = document.querySelector("#drinksImage");
 var drinkTileOne = document.querySelector(".TileOne");
 var drinkTileTwo = document.querySelector(".TileTwo");
-console.log(drinkTileOne);
 
 var firstUserChoice 
 var secondUserChoice 
@@ -34,7 +33,6 @@ function startDrinkQuestions() {
 //show drink question 2
 function showDrinkQuestion2(event) {
     firstUserChoice = event.target.id;
-    console.log(firstUserChoice);
     content.classList.add("hide");
     drinkQuestion1.classList.add("hide");
     drinkQuestion2.classList.remove("hide");
@@ -45,9 +43,7 @@ function showDrinkQuestion2(event) {
 //show drink options based on previous two user choices
 function showDrinkOptions(event) {
     secondUserChoice = event.target.id;
-    console.log(secondUserChoice);
     combinedChoices = firstUserChoice.concat(secondUserChoice);
-    console.log(combinedChoices);
     switch (combinedChoices) {
         case 'alcoholicbitter':
             window.location.href = "./assets/Drinks/alcoholic-bitter.html"
@@ -78,7 +74,7 @@ function returnDrinkQuestion1() {
   }
   
 function startAgain() {
-    window.location = "./index.html";
+    window.location.href = "/Whats-for-Dinner/";
     // startDrinkQuestions();
     // showDrinkQuestion2();
     // content.classList.add("hide");
@@ -88,7 +84,7 @@ function startAgain() {
 }
 
 function openHTML() {
-window.location = "./index.html";
+window.location = "../index.html";
 }
 
 

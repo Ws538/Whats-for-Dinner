@@ -27,6 +27,3 @@ searchButton.addEventListener('click', (e) => {
   window.location = `./assets/Search/search.html?q=${val}`;
 })
 
-fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito')
-    .then(res => res.json())
-    .then(data => console.log(data))

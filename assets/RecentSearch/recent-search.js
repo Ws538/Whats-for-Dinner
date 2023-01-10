@@ -3,7 +3,7 @@ const ls = JSON.parse(localStorage.getItem('recent'));
 if (ls) {
   ul.innerHTML = `
     ${ls.map(item=>{
-      return `<li><a href="${window.location.origin}/assets/Search/search.html?q=${item}">${item}</a></li>`;
+      return `<li><a href="../Search/search.html?q=${item}">${item}</a></li>`;
     }).join('')}
   `
 }

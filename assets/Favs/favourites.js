@@ -5,7 +5,7 @@ function displayFavourites() {
   if (ls) {
     ul.innerHTML = `
       ${ls.map(item=>{
-        return `<li><a href="${window.location.origin}/assets/Recipe/recipe.html?recipe=${item.id}">${item.name}</a> <button data-id=${item.id} class="delete-btn">Delete</button></li>`;
+        return `<li><a href="../Recipe/recipe.html?recipe=${item.id}">${item.name}</a> <button data-id=${item.id} class="delete-btn">Delete</button></li>`;
       }).join('')}
     `
   }  

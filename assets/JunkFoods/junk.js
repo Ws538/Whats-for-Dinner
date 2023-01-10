@@ -208,9 +208,7 @@ const initSaveButtons = () => {
       if (error) {
         return;
       }
-      window.location.replace(
-        window.location.origin + `/assets/Recipe/recipe.html?recipe=${recipe}`
-      );
+      window.location = `../Recipe/recipe.html?recipe=${recipe}`;
     });
   });
 };
