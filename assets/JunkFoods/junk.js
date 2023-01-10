@@ -143,7 +143,7 @@ function startChineseChoices() {
   backButton.classList.remove("hide");
 }
 
-function openjunkHTML() {
+function openJunkHTML() {
   window.location.href = "./Junk.html";
 }
 
