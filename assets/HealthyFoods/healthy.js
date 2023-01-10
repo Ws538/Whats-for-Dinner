@@ -147,7 +147,7 @@ function openHealthyHTML() {
 }
 
 function openHTML() {
-  window.location.pathname = "index.html";
+  window.location = "../../index.html";
 }
 
 function selectRandomDiv() {
