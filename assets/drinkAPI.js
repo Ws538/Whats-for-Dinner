@@ -1,6 +1,5 @@
 let params = (new URL(document.location)).searchParams;
 let drinkName = params.get('name');
-console.log(drinkName);
 url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + drinkName;
 const drinkImgDisplay = document.querySelector('img');
 const drinkNameDisplay = document.querySelector('h1');
