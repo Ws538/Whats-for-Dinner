@@ -24,7 +24,7 @@ searchButton.addEventListener('click', (e) => {
   const val = searchBar.value;
   if (!val.length) return;
   saveSearchToLS(val);
-  window.location = location.origin + `/assets/Search/search.html?q=${val}`;
+  window.location = `./assets/Search/search.html?q=${val}`;
 })
 
 fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito')

@@ -78,8 +78,7 @@ const showRecipes = (data) => {
             <h5 class="card-title">${recipe.recipe.label}</h5>
         
             <a href="${
-              window.location.origin +
-              `/assets/Recipe/recipe.html?recipe=${recipeId}`
+              `../Recipe/recipe.html?recipe=${recipeId}`
             }" class="btn" style="background-color: #A83E3C; color: white;">Details</a>
           
      
