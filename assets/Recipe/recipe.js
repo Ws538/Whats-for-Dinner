@@ -91,7 +91,7 @@ window.onload = () => {
         }
       });
     } else {
-      window.location.replace(window.location.origin + '/index.html');
+      window.location = "../../index.html";
     }
  
 
