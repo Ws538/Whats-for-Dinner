@@ -3,6 +3,38 @@ body {
     background-size: inherit;
   }
 
+  header {
+    width: 100%;
+    padding: 2.5em 0;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    z-index: 2;
+    transition: background-color 0.8s;
+}
+header:hover {
+    background-color: rgba(255, 255, 255, 0.364);
+}
+nav {
+    padding: 0 4em;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+ 
+}
+nav > a {
+    color: black;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+nav > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 1em;
+    font-size: 1.4em;
+}
+
 img {
     height: 50%;
     width: 100%;
