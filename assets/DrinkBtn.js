@@ -74,7 +74,7 @@ function returnDrinkQuestion1() {
   }
   
 function startAgain() {
-    window.location.pathname = "../index.html";
+    window.location = "../index.html";
 }
 
 function openHTML() {
