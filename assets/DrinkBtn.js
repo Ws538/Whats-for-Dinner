@@ -78,7 +78,7 @@ function startAgain() {
 }
 
 function openHTML() {
-window.location = "../index.html";
+window.location.reload();
 }
 
 
