@@ -74,7 +74,7 @@ function returnDrinkQuestion1() {
   }
   
 function startAgain() {
-    window.location = "./index.html";
+    window.location = "../index.html";
     // startDrinkQuestions();
     // showDrinkQuestion2();
     // content.classList.add("hide");
@@ -84,7 +84,7 @@ function startAgain() {
 }
 
 function openHTML() {
-window.location = "./index.html";
+window.location = "../index.html";
 }
 
 
