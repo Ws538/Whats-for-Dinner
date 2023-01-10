@@ -89,5 +89,5 @@ function displayRecipe(event) {
 }
 
 // add event listeners to drink option tiles to trigger call API function
-drinkTileOne.addEventListener("click", displayRecipe);
-drinkTileTwo.addEventListener("click", displayRecipe);
+drinkTileOne?.addEventListener("click", displayRecipe);
+drinkTileTwo?.addEventListener("click", displayRecipe);
